@@ -1,0 +1,36 @@
+{
+  "name": "torch",
+  "image": "nvidia/cuda:12.9.1-cudnn-devel-ubuntu24.04",
+  "runArgs": ["--gpus", "all", "--shm-size", "16g"],
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": false,
+      "version": "3.12"
+    },
+    "ghcr.io/devcontainers-extra/features/poetry:2": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "installOhMyZsh": false,
+      "installOhMyZshConfig": false,
+      "upgradePackages": false,
+      "username": "vscode",
+      "userUid": "automatic",
+      "userGid": "automatic"
+    }
+  },
+  "onCreateCommand": "poetry config virtualenvs.in-project true",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
+        "ms-python.python"
+      ]
+    }
+  }
+}

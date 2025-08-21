@@ -1,0 +1,30 @@
+[project]
+name = "material-enhancer"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "SupeChan",email = "97174301+SupeChan@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "segmentation-models-pytorch (>=0.5.0,<0.6.0)",
+    "natsort (>=8.4.0,<9.0.0)",
+    "opencv-python (>=4.12.0.88,<5.0.0.0)",
+    "av (>=15.0.0,<16.0.0)",
+    "nuitka (>=2.7.12,<3.0.0)",
+    "torchvision (>=0.23.0,<0.24.0)",
+    "torch (>=2.8.0,<3.0.0)",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+
+[[tool.poetry.source]]
+name = "torch_cu129"
+url = "https://download.pytorch.org/whl/cu129"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
