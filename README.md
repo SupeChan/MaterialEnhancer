@@ -10,7 +10,7 @@
 
 - OS: Win10以上
 - 依存ランタイム: [Microsoft Visual C++ 2015-2022 Redistributable  (x64)](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-- SDK: [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)（GPU対応版のみ必要）
+- GPU: Nvidia製GPU (GPU対応版のみ必要)
 
 `Microsoft Visual C++ 2015-2022 Redistributable`は殆どのPCで既にインストールされていると思いますが
 
@@ -28,18 +28,19 @@
 
 - Nvidia製GPUを使っている
 - 処理を高速化したい
-- CPU版と比較してアプリの容量が４GBが増えても気にしない
-- CUDA Tookitを追加でインストールする手間が増えても気にしない
+- アプリの容量がGPU用のランタイム分(4GB)増えても気にしない
 
 という人はGPU対応版を使ってください。
 
 GPUサポートの有無はアプリ画面に表示されます。
 
-有効になっていない場合は、以下の操作で有効になります。
+有効になっていない場合は、以下の操作で有効になるはずです。
 
 1. GPUに最新版のドライバを適用
-2. CUDA Toolkit 12.9以上をインストール
-3. PCを再起動後、このアプリを起動する
+2. PCを再起動後、このアプリを起動する
+
+それでも有効にならなかったときには、
+CUDA Toolkit 12.9以上をインストールすると有効になるかもしれません。
 
 ## 操作手順
 
